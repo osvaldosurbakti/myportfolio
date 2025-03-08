@@ -1,24 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <nav className="w-full p-4 shadow-md bg-gradient-to-r from-blue-500 to-purple-500 fixed top-0 left-0 z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center text-xl font-bold text-white">
-          <img src="images/logo.png" alt="Logo" className="w-8 h-8 mr-2" />
+          <Image src="/logo.png" alt="Logo" className="w-8 h-8 mr-2" />
           MyPortfolio
         </Link>
 

@@ -58,7 +58,7 @@ export default function Hero() {
 
         {/* Title & Subtitle */}
         <h1 className="text-5xl font-extrabold tracking-tight animate-fadeIn mt-6">
-          Hi, I'm <span className="text-blue-400">{process.env.NEXT_PUBLIC_USER_NAME}</span> 👋
+          Hi, I{'\''}m <span className="text-blue-400">{process.env.NEXT_PUBLIC_USER_NAME}</span> 👋
         </h1>
         <p className="text-lg text-gray-300 mt-4 max-w-xl mx-auto">
           Fullstack Developer | React & Node.js Enthusiast | MongoDB & SQL
