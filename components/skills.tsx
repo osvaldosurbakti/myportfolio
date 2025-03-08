@@ -21,7 +21,6 @@ const skillLevels = {
 export default function SkillsCarousel() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [isAutoplay, setIsAutoplay] = useState(true);
 
   // Filter skills dengan useMemo untuk optimasi performa
   const filteredSkills = useMemo(
@@ -51,6 +50,7 @@ export default function SkillsCarousel() {
             placeholder="Search skills..."
             className="p-3 pl-10 w-64 rounded-lg shadow-md bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
             onChange={(e) => setSearch(e.target.value)}
+            aria-label="Search skills"
           />
           <FaSearch className="absolute left-3 top-3 text-gray-400" />
         </div>
@@ -90,11 +90,8 @@ export default function SkillsCarousel() {
               spaceBetween={20}
               navigation
               pagination={{ clickable: true }}
-              autoplay={
-                isAutoplay ? { delay: 4000, disableOnInteraction: false } : false
-              }
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
               loop={true}
-              touchEventsTarget="container"
               breakpoints={{
                 320: { slidesPerView: 1 },
                 640: { slidesPerView: 2 },
@@ -106,7 +103,9 @@ export default function SkillsCarousel() {
                   <Tilt glareEnable={true} glareMaxOpacity={0.5} scale={1.05}>
                     <motion.div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative group text-center">
                       <div className="w-16 h-16 mx-auto">
-                        <skill.icon className="w-full h-full text-blue-600 dark:text-blue-400 transition-all duration-300 group-hover:rotate-6" />
+                        {skill.icon && React.createElement(skill.icon, {
+                          className: "w-full h-full text-blue-600 dark:text-blue-400 transition-all duration-300 group-hover:rotate-6"
+                        })}
                       </div>
                       <p className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">
                         {skill.name}

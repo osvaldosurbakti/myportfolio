@@ -13,13 +13,13 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="max-w-3xl mx-auto"
       >
-        <h2 className="text-4xl font-bold">Let's Work Together!</h2>
-        <p className="mt-4 text-lg opacity-90">
+        <h2 className="text-4xl font-bold">Let&apos;s Work Together!</h2>
+        <p className="mt-4 text-lg text-opacity-90">
           Whether you have a project in mind or just want to say hi, feel free to reach out.
         </p>
 
         <div className="mt-8 flex justify-center space-x-4">
-          <Link href="/contact">
+          <Link href="/contact" aria-label="Contact Me">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -38,7 +38,7 @@ export default function Contact() {
           className="mt-12 flex justify-center items-center space-x-3"
         >
           <Send className="text-white opacity-70" size={28} />
-          <p className="text-lg opacity-80">I'm open to new opportunities!</p>
+          <p className="text-lg text-opacity-80">I&apos;m open to new opportunities!</p>
         </motion.div>
       </motion.div>
     </section>
