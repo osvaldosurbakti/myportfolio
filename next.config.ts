@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['via.placeholder.com'], // Tambahkan domain yang diizinkan di sini
+    domains: ["source.unsplash.com", "picsum.photos"],
     unoptimized: false, // Pastikan ini *tidak* diubah ke true
   }
 };
