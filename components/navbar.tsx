@@ -14,8 +14,8 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center text-xl font-bold text-white">
-          <Image src="/logo.png" alt="Logo" className="w-8 h-8 mr-2" />
-          MyPortfolio
+          <Image src="/logo.png" alt="Logo" width={32} height={32} className="mr-2" />
+            MyPortfolio
         </Link>
 
         {/* Mobile Menu Button */}
