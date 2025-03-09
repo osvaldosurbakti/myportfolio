@@ -3,7 +3,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
+interface ProjectPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function ProjectDetail({ params }: ProjectPageProps) {
   const project = projects.find((p) => p.id === params.id);
 
   if (!project) {
@@ -21,14 +27,14 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
       {/* Project Image */}
       <div className="relative w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-lg">
-  <Image
-    src={project.image}
-    alt={project.title}
-    layout="fill" // Agar gambar memenuhi div
-    objectFit="cover" // Menyesuaikan dengan container tanpa merubah aspek rasio
-    className="rounded-lg"
-  />
-</div>
+        <Image
+          src={project.image}
+          alt={project.title}
+          layout="fill" // Agar gambar memenuhi div
+          objectFit="cover" // Menyesuaikan dengan container tanpa merubah aspek rasio
+          className="rounded-lg"
+        />
+      </div>
 
       {/* Project Title */}
       <h1 className="text-4xl font-bold mt-6 text-gray-900">{project.title}</h1>
