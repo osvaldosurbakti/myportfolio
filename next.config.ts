@@ -2,9 +2,18 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["source.unsplash.com", "picsum.photos"],
-    unoptimized: false, // Pastikan ini *tidak* diubah ke true
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
+    ],
+    unoptimized: false, // Biarkan tetap false untuk optimasi gambar
+  },
 };
 
 export default nextConfig;
