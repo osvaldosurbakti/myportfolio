@@ -5,14 +5,12 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 interface ProjectPageProps {
-  params: {
-    id: string;
-  };
+  params: any
 }
 
 // Generate metadata untuk SEO
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const project = projects.find((p) => p.id === params.id);
+  const project = projects.find((p) => p.id === Number(params.id));
   
   if (!project) {
     return {
@@ -38,7 +36,7 @@ export async function generateStaticParams() {
 }
 
 export default function ProjectDetail({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.id === params.id);
+  const project = projects.find((p) => p.id === Number(params.id));
 
   if (!project) {
     return notFound();
