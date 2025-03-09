@@ -1,6 +1,4 @@
-"use client";
-
-import { projects } from "@/data/projects";
+import { projects } from "@/app/data/projects"; // Pastikan path ini valid
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
