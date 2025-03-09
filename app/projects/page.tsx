@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

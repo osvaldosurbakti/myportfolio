@@ -32,7 +32,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-5xl font-extrabold text-gray-900 mb-4">📩 Contact Me</h1>
-        <p className="text-gray-700 text-lg">Let's collaborate or just have a chat! I'm available via email, WhatsApp, or social media.</p>
+        <p className="text-gray-700 text-lg">Let's collaborate or just have a chat! I&apos;m available via email, WhatsApp, or social media.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="bg-white bg-opacity-50 backdrop-blur-lg rounded-2xl p-6 shadow-lg">
