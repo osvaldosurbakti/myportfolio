@@ -2,11 +2,39 @@ import { projects } from "@/app/data/projects"; // Pastikan path ini valid
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 
 interface ProjectPageProps {
   params: {
     id: string;
   };
+}
+
+// Generate metadata untuk SEO
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const project = projects.find((p) => p.id === params.id);
+  
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The project you are looking for does not exist.",
+    };
+  }
+
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      images: [project.image],
+    },
+  };
+}
+
+// Static params untuk halaman dinamis
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
 }
 
 export default function ProjectDetail({ params }: ProjectPageProps) {
@@ -30,9 +58,8 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
         <Image
           src={project.image}
           alt={project.title}
-          layout="fill" // Agar gambar memenuhi div
-          objectFit="cover" // Menyesuaikan dengan container tanpa merubah aspek rasio
-          className="rounded-lg"
+          fill // Gunakan fill tanpa string
+          className="rounded-lg object-cover"
         />
       </div>
 
@@ -60,22 +87,26 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
 
       {/* Action Buttons */}
       <div className="mt-6 flex gap-4">
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
-        >
-          Live Demo
-        </a>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 border border-gray-600 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition"
-        >
-          View on GitHub
-        </a>
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+          >
+            Live Demo
+          </a>
+        )}
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 border border-gray-600 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition"
+          >
+            View on GitHub
+          </a>
+        )}
       </div>
 
       {/* Call to Action */}
