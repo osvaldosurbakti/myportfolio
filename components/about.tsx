@@ -45,7 +45,7 @@ export default function About() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        I&apos;m a passionate Frontend Developer with experience in building modern web applications using
+        I&apos;m a passionate Fullstack Developer with experience in building modern web applications using
         <span className="text-blue-600 font-medium"> React, Next.js, and Tailwind CSS</span>.
         I love crafting beautiful, functional, and responsive designs.
       </motion.p>

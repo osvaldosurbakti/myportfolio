@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center text-xl font-bold text-white">
           <Image src="/logo.png" alt="Logo" width={32} height={32} className="mr-2" />
-            MyPortfolio
+            Osvaldo Surbakti
         </Link>
 
         {/* Mobile Menu Button */}

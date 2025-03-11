@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
         {/* Copyright */}
         <p className="text-sm text-center md:text-left">
-          © {new Date().getFullYear()} MyPortfolio. All rights reserved.
+          © {new Date().getFullYear()} Osvaldo Surbakti. All rights reserved.
         </p>
 
         {/* Social Media Links */}
