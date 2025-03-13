@@ -1,15 +1,18 @@
-import { projects } from "@/app/data/projects"; // Pastikan path ini valid
+"use client";
+
+import { useParams } from "next/navigation";
+import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-interface ProjectPageProps {
-  params: {
-    id: string;
-  };
-}
+export default function ProjectDetail() {
+  const params = useParams();
 
-export default function ProjectDetail({ params }: ProjectPageProps) {
+  if (!params || !params.id) {
+    return notFound();
+  }
+
   const project = projects.find((p) => String(p.id) === String(params.id));
 
   if (!project) {
@@ -30,9 +33,9 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
         <Image
           src={project.image}
           alt={project.title}
-          layout="fill" // Agar gambar memenuhi div
-          objectFit="cover" // Menyesuaikan dengan container tanpa merubah aspek rasio
-          className="rounded-lg"
+          width={800}
+          height={600}
+          className="rounded-lg object-cover"
         />
       </div>
 
@@ -77,20 +80,6 @@ export default function ProjectDetail({ params }: ProjectPageProps) {
           View on GitHub
         </a>
       </div>
-
-      {/* Call to Action */}
-      <div className="mt-12 text-center bg-gray-100 p-6 rounded-lg shadow-md">
-  <h2 className="text-2xl font-semibold text-gray-900">
-    Interested in working together?
-  </h2>
-  <p className="text-gray-600 mt-2">Let’s build something great together.</p>
-  <Link
-    href="/contact"
-    className="mt-4 block w-full text-center bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition md:inline-block md:w-auto"
-  >
-    Contact Me
-  </Link>
-</div>
     </div>
   );
 }
