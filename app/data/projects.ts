@@ -1,82 +1,77 @@
+// Dummy data for projects page
+
 export const projects = [
   {
-    id: 1,
-    title: "Raksa Aegis App",
-    description: "Sistem asuransi berbasis web untuk PT Asuransi Raksa Pratikara.",
-    tech: ["Next.js", "Tailwind CSS", "MongoDB"],
-    image: "https://picsum.photos/600/400?random=1",
-    demo: "#",
-    github: "#",
-    details: "Raksa Aegis adalah sistem asuransi berbasis web yang memudahkan pengelolaan polis dan klaim."
+    id: "approval-app",
+    title: "Sistem Approval Permohonan Uang Muka",
+    image: "/proyek1.png",
+    shortDescription:
+      "A web-based approval system for cash advance requests with multi-role workflow (Pemohon, KTU, EM, Staff Keuangan). Built with Next.js, React, Tailwind CSS, and MongoDB.",
+    description: `
+      This project is a professional web application for managing and approving cash advance requests (permohonan uang muka) in an organization. The system features a multi-role workflow:
+      
+      1. Login: All users (Pemohon, KTU, EM, Staff Keuangan) authenticate with username and password.
+      2. Pengisian Form: Pemohon fills out a detailed cash advance request form (name, purpose, amount, date needed, etc).
+      3. Approval KTU: KTU reviews incoming requests, can approve or reject with notes.
+      4. Diketahui EM: EM reviews requests approved by KTU and marks as "Diketahui".
+      5. Proses Staff Keuangan: Staff Keuangan processes approved requests, adds transaction info, and uploads proof of transfer.
+      6. Tracking & Riwayat: All users can track the status and history of their requests.
+          `,
+    tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
+    github: "https://github.com/osvaldosurbakti/approval-app",
   },
   {
-    id: 2,
-    title: "Company Profile Ratu Seroja Nirwana",
-    description: "Website company profile berbasis Next.js.",
-    tech: ["Next.js", "Tailwind CSS"],
-    image: "https://picsum.photos/600/400?random=2",
-    demo: "#",
-    github: "#",
-    details: "Website ini menampilkan profil perusahaan Ratu Seroja Nirwana dengan desain modern dan responsif."
+    id: "ecommerce",
+    title: "E-Commerce Platform",
+    image: "/projects/ecommerce.png", // pastikan file ada di public/projects/ecommerce.png
+    shortDescription: "A full-featured e-commerce web app with product catalog, cart, checkout, and admin dashboard.",
+    description: `
+      This e-commerce platform allows users to browse products, add them to a cart, and complete purchases. 
+      Features include authentication, product management, order tracking, and an admin dashboard. 
+      Built with React, Node.js, Express, and MongoDB.
+    `,
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/osvaldosurbakti/approval-app.com",
+    demo: "https://ecommerce-demo.com",
   },
   {
-    id: 3,
-    title: "Job Portal System",
-    description: "Platform rekrutmen berbasis web dengan fitur lowongan pekerjaan dan aplikasi.",
-    tech: ["React", "Node.js", "MongoDB", "Express.js"],
-    image: "https://picsum.photos/600/400?random=3",
-    demo: "#",
-    github: "#",
-    details: "Sistem ini memungkinkan perusahaan memposting lowongan dan kandidat mengajukan lamaran secara online."
+    id: "blog",
+    title: "Modern Blog Platform",
+    image: "/projects/blog.png", // pastikan file ada di public/projects/blog.png
+    shortDescription: "A blog platform with markdown support, comments, and user authentication.",
+    description: `
+      A modern blog application where users can write, edit, and delete posts using markdown. 
+      Includes features like comments, user authentication, and a rich text editor. 
+      Built with Next.js, Prisma, and PostgreSQL.
+    `,
+    tech: ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    github: "https://github.com/osvaldosurbakti/blog",
+    demo: "https://blog-demo.com",
   },
   {
-    id: 4,
-    title: "Personal Portfolio",
-    description: "Website portofolio pribadi dengan Next.js dan animasi interaktif.",
-    tech: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    image: "https://picsum.photos/600/400?random=4",
-    demo: "#",
-    github: "#",
-    details: "Portofolio ini menampilkan proyek, pengalaman kerja, serta kontak dengan desain minimalis dan modern."
-  },
-  {
-    id: 5,
-    title: "Company Profile Seroja Medan Group",
-    description: "Website company profile untuk Seroja Medan Group.",
-    tech: ["React", "Tailwind CSS", "Node.js"],
-    image: "https://picsum.photos/600/400?random=5",
-    demo: "#",
-    github: "#",
-    details: "Website ini menampilkan informasi perusahaan dan layanan yang disediakan oleh Seroja Medan Group."
-  },
-  {
-    id: 6,
-    title: "Financial Notes App",
-    description: "Aplikasi pencatatan keuangan sederhana berbasis web.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image: "https://picsum.photos/600/400?random=6",
-    demo: "#",
-    github: "#",
-    details: "Aplikasi ini membantu pengguna mencatat pemasukan dan pengeluaran dengan antarmuka yang intuitif."
-  },
-  {
-    id: 7,
-    title: "WhatsApp Integration System",
-    description: "Sistem integrasi WhatsApp API untuk bisnis.",
-    tech: ["Node.js", "Express.js", "MongoDB"],
-    image: "https://picsum.photos/600/400?random=7",
-    demo: "#",
-    github: "#",
-    details: "Sistem ini memungkinkan bisnis mengelola pesan WhatsApp secara otomatis dengan API dan chatbot."
-  },
-  {
-    id: 8,
+    id: "dashboard",
     title: "Admin Dashboard",
-    description: "Dashboard admin untuk mengelola data pengguna dan transaksi.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image: "https://picsum.photos/600/400?random=8",
-    demo: "#",
-    github: "#",
-    details: "Dashboard ini menampilkan statistik, laporan transaksi, dan manajemen pengguna dengan UI modern."
-  }
+    image: "/projects/dashboard.png", // pastikan file ada di public/projects/dashboard.png
+    shortDescription: "A professional dashboard for managing users, analytics, and content.",
+    description: `
+      An admin dashboard with charts, tables, and user management features. 
+      Built with React, Chart.js, and Material UI for a clean and interactive experience.
+    `,
+    tech: ["React", "Chart.js", "Material UI"],
+    github: "https://github.com/osvaldosurbakti/dashboard",
+    demo: "https://dashboard-demo.com",
+  },
+  {
+    id: "chatapp",
+    title: "Real-time Chat App",
+    image: "/projects/chatapp.png", // pastikan file ada di public/projects/chatapp.png
+    shortDescription: "A real-time chat application with rooms, private messaging, and emoji support.",
+    description: `
+      A chat app supporting multiple rooms, private messages, and emoji reactions. 
+      Built with React, Socket.io, and Node.js for real-time communication.
+    `,
+    tech: ["React", "Socket.io", "Node.js", "Express"],
+    github: "https://github.com/osvaldosurbakti/chatapp",
+    demo: "https://chatapp-demo.com",
+  },
 ];

@@ -1,10 +1,10 @@
 "use client";
 
-import Hero from "@/components/hero";
-import About from "@/components/about";
-import Skills from "@/components/skills";
-import Projects from "@/components/projects";
-import Contact from "@/components/contact";
+import Hero from "@/components/main/hero";
+import About from "@/components/main/about";
+import Skills from "@/components/main/skills";
+import Projects from "@/components/main/projects";
+import Contact from "@/components/main/contact";
 
 export default function HomePage() {
   return (

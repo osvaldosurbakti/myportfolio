@@ -1,13 +1,15 @@
 "use client";
-
 import { useParams } from "next/navigation";
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function ProjectDetail() {
   const params = useParams();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   if (!params || !params.id) {
     return notFound();
@@ -19,8 +21,22 @@ export default function ProjectDetail() {
     return notFound();
   }
 
+  // Cek jika ada video untuk proyek approval-system
+  const hasVideo = project.id === "approval-system";
+  const videoSrc = hasVideo ? "/proyek1.mp4" : null;
+
+  // Auto play video saat halaman diklik
+  const handleDetailClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
+    <div
+      className="max-w-4xl mx-auto px-6 py-12 cursor-pointer"
+      onClick={handleDetailClick}
+    >
       {/* Header */}
       <div className="mb-8">
         <Link href="/projects" className="text-blue-500 hover:underline">
@@ -28,49 +44,68 @@ export default function ProjectDetail() {
         </Link>
       </div>
 
-      {/* Project Image */}
-      <div className="relative w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-lg">
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={800}
-          height={600}
-          className="rounded-lg object-cover"
-        />
+      {/* Project Media */}
+      <div className="relative w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-lg bg-black flex items-center justify-center">
+        {hasVideo && videoSrc ? (
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover rounded-lg"
+            poster={project.image}
+          />
+        ) : (
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={800}
+            height={600}
+            className="rounded-lg object-cover w-full h-full"
+          />
+        )}
+
+        {/* Badge Video Demo */}
+        {hasVideo && (
+          <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow font-semibold z-10">
+            Video Demo
+          </span>
+        )}
       </div>
 
       {/* Project Title */}
-      <h1 className="text-4xl font-bold mt-6 text-gray-900">{project.title}</h1>
-      <p className="text-gray-600 mt-2">{project.description}</p>
+      <motion.h1
+        className="text-4xl font-bold mt-6 text-gray-900"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        {project.title}
+      </motion.h1>
+      <p className="text-gray-600 mt-2 whitespace-pre-line">{project.description}</p>
 
       {/* Tech Stack */}
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tech.map((tech, i) => (
-          <span
+          <motion.span
             key={i}
             className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
           >
             {tech}
-          </span>
+          </motion.span>
         ))}
       </div>
 
       {/* Project Details */}
-      <div className="mt-6">
-        <h2 className="text-2xl font-semibold text-gray-800">Project Overview</h2>
-        <p className="text-gray-700 mt-2 leading-relaxed">{project.details}</p>
-      </div>
 
       {/* Action Buttons */}
       <div className="mt-6 flex gap-4">
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
-        >
-          Live Demo
-        </a>
         <a
           href={project.github}
           target="_blank"
