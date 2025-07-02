@@ -80,7 +80,7 @@ export function AboutWho() {
         transition={{ duration: 0.5, delay: 0.6 }}
       >
         Hello! I&apos;m a <span className="font-bold text-blue-700">Fullstack Developer</span> passionate about building robust, scalable, and user-friendly web applications.<br />
-        I graduated from <span className="font-semibold text-purple-700">Universitas Brawijaya, Malang</span> with a degree in Computer Engineering.<br />
+        I graduated from <span className="font-semibold text-purple-700">Brawijaya University, Malang</span> with a degree in Computer Engineering.<br />
         My journey blends <span className="font-semibold text-blue-600">frontend</span> and <span className="font-semibold text-green-600">backend</span> expertise, allowing me to deliver complete solutions from UI/UX to server logic.
       </motion.p>
       {/* Tech stack highlight dengan animasi stagger */}

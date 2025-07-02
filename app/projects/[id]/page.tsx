@@ -21,9 +21,9 @@ export default function ProjectDetail() {
     return notFound();
   }
 
-  // Cek jika ada video untuk proyek approval-system
-  const hasVideo = project.id === "approval-system";
-  const videoSrc = hasVideo ? "/proyek1.mp4" : null;
+  // Cek jika ada video untuk proyek (gunakan properti video dari data)
+  const hasVideo = !!project.video;
+  const videoSrc = project.video || null;
 
   // Auto play video saat halaman diklik
   const handleDetailClick = () => {
@@ -34,7 +34,7 @@ export default function ProjectDetail() {
 
   return (
     <div
-      className="max-w-4xl mx-auto px-6 py-12 cursor-pointer"
+      className="relative max-w-4xl mx-auto px-6 py-12 min-h-[calc(100vh-120px)] flex flex-col justify-start"
       onClick={handleDetailClick}
     >
       {/* Header */}
@@ -105,15 +105,29 @@ export default function ProjectDetail() {
       {/* Project Details */}
 
       {/* Action Buttons */}
-      <div className="mt-6 flex gap-4">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 border border-gray-600 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition"
-        >
-          View on GitHub
-        </a>
+      <div className="mt-6 flex gap-4 mb-8">
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 border border-gray-600 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition"
+          >
+            View on GitHub
+          </a>
+        )}
+
+        {/* Tombol Live Demo */}
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+          >
+            Live Demo
+          </a>
+        )}
       </div>
     </div>
   );
