@@ -19,6 +19,7 @@ export const projects = [
           `,
     tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
     github: "https://github.com/osvaldosurbakti/approval-app",
+        video: "/proyek1.mp4"
   },
   {
     id: "marketing-reg-surat",
