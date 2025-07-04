@@ -88,5 +88,85 @@ export const projects = [
     `,
     tech: ["PHP", "CSS", "JavaScript", "CodeIgniter"],
     video: "/proyek4.mp4"
+  },
+  {
+    id: "jatimakmur",
+    title: "Website Perusahaan Jatimakmur Pratama",
+    image: "/proyek5.png",
+    shortDescription:
+      "Company profile website for Jatimakmur Pratama, featuring company profile, product showcase, gallery, production process, and contact page. Built with React and React Router.",
+    description: `
+      This project is a company profile website for Jatimakmur Pratama, developed using React. The website features a company profile page, product showcase, photo gallery, production process description, and a contact page. Navigation between pages is seamless using React Router, with automatic scroll-to-top on each route change.
+
+      **Key Features:**
+      - Company profile and vision introduction
+      - Product showcase with detailed descriptions
+      - Photo gallery of products and facilities
+      - Production process explanation
+      - Contact page for client inquiries
+      - Smooth navigation with React Router and auto scroll-to-top
+      - Responsive design and modular components for optimal UX
+
+      This website strengthens the company's branding, helps potential clients learn about products and services, and increases Jatimakmur Pratama's credibility in the digital space.
+    `,
+    tech: ["React", "React Router", "CSS", "JavaScript"],
+    github: "https://github.com/osvaldosurbakti/jatimakmurpratama",
+    demo : "https://jatimakmurpratama.vercel.app/",
+    video: "/proyek5.mp4"
+  },
+  {
+    id: "seroja-group",
+    title: "Company Profile & Recruitment Website – Seroja Medan Group",
+    image: "/proyek6.png",
+    shortDescription:
+      "Modern company profile and recruitment website for Seroja Medan Group. Features company info, project portfolios, job listings, and online application. Built with React, Node.js, MongoDB, and Tailwind CSS.",
+    description: `
+      This project is a modern, responsive company profile and recruitment website developed for Seroja Medan Group. It showcases company information, project portfolios, job openings, and a job application form. The system is built using React.js, Node.js, MongoDB, and Tailwind CSS with a modular component structure for scalability and easy maintenance.
+
+      **Key Features:**
+      - Company profile pages, including vision, mission, and leadership team
+      - Portfolio showcase with detailed descriptions and images
+      - Career section with active job listings and detailed job descriptions
+      - Job application form with resume upload functionality
+      - Login system for admin and superadmin (dummy authentication)
+      - Dynamic navigation UI: public users see a top navbar, admin/superadmin see a sidebar dashboard
+
+      **Tech Stack:** React.js, Node.js, MongoDB, Tailwind CSS
+
+      **Project Purpose:**  
+      To provide a professional digital platform that promotes the company’s identity and facilitates online job recruitment effectively.
+    `,
+    tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/osvaldosurbakti/serojamedan",
+    demo: "https://frontendseroja.vercel.app/",
+    video: "/proyek6.mp4"
+  },
+  {
+    id: "ratuseroja",
+    title: "🌸 Ratu Seroja Nirwana Group – Company Profile Website",
+    image: "/proyek7.png",
+    shortDescription:
+      "Company profile website for Ratu Seroja Nirwana Group, featuring company info, services, project portfolio, news, and contact. Built with React.js and Tailwind CSS.",
+    description: `
+      I developed a company profile website for Ratu Seroja Nirwana Group, a company engaged in services and trading. The website is designed to showcase company information, main services, project portfolio, and a news & updates feature.
+
+      **Key Features:**
+      - Modern, responsive homepage
+      - About Company (Profile, Vision, Mission)
+      - List of offered services
+      - Project portfolio
+      - "News & Update" feature manageable by admin
+      - Contact form and social media info
+
+      **Technologies Used:**
+      - Frontend: React.js & Tailwind CSS
+      - Routing: React Router
+      - Admin Content Management: Designed for non-technical users to update content (especially news & portfolio)
+      - Responsive Design: Optimized for desktop and mobile
+    `,
+    tech: ["React.js", "Tailwind CSS", "React Router"],
+    github: "https://github.com/osvaldosurbakti/ratuserojanirwana/commit/4cfe7fad3a90449b4fafffd9f7da2ce51c4ff614",
+    demo: "https://ratuserojanirwana.vercel.app/",
+    video: "/proyek7.mp4"
   }
 ];

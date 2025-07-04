@@ -118,7 +118,7 @@ export default function ProjectDetail() {
         )}
 
         {/* Tombol Live Demo */}
-        {/* {project.demo && (
+        {project.demo && (
           <a
             href={project.demo}
             target="_blank"
@@ -127,7 +127,7 @@ export default function ProjectDetail() {
           >
             Live Demo
           </a>
-        )} */}
+        )}
       </div>
     </div>
   );
