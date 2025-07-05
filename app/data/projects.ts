@@ -1,43 +1,43 @@
-// Dummy data for projects page
+// Professional English Data for Projects Page
 
 export const projects = [
   {
     id: "approval-app",
-    title: "Sistem Approval Permohonan Uang Muka",
+    title: "Cash Advance Approval System",
     image: "/proyek1.png",
     shortDescription:
-      "A web-based approval system for cash advance requests with multi-role workflow (Pemohon, KTU, EM, Staff Keuangan). Built with Next.js, React, Tailwind CSS, and MongoDB.",
+      "A web-based approval system for managing cash advance requests with multi-role workflow (Requester, KTU, EM, Finance). Developed using Next.js, React, Tailwind CSS, and MongoDB.",
     description: `
-      This project is a professional web application for managing and approving cash advance requests (permohonan uang muka) in an organization. The system features a multi-role workflow:
+      This project is a professional web-based system designed to streamline the approval workflow of cash advance (uang muka) requests within an organization. It supports a multi-role access structure with the following flow:
       
-      1. Login: All users (Pemohon, KTU, EM, Staff Keuangan) authenticate with username and password.
-      2. Pengisian Form: Pemohon fills out a detailed cash advance request form (name, purpose, amount, date needed, etc).
-      3. Approval KTU: KTU reviews incoming requests, can approve or reject with notes.
-      4. Diketahui EM: EM reviews requests approved by KTU and marks as "Diketahui".
-      5. Proses Staff Keuangan: Staff Keuangan processes approved requests, adds transaction info, and uploads proof of transfer.
-      6. Tracking & Riwayat: All users can track the status and history of their requests.
-          `,
+      1. Login: All users (Requester, KTU, EM, Finance) log in with individual credentials.
+      2. Request Submission: Requesters fill out detailed forms including amount, purpose, and due date.
+      3. KTU Review: KTU reviews and approves/rejects requests with optional remarks.
+      4. EM Confirmation: EM provides acknowledgment and oversight approval.
+      5. Finance Processing: Finance team completes the process by adding transfer data and uploading proof.
+      6. Tracking: Users can track request status and view historical submissions.
+    `,
     tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
     github: "https://github.com/osvaldosurbakti/approval-app",
-        video: "/proyek1.mp4"
+    video: "/proyek1.mp4"
   },
   {
     id: "marketing-reg-surat",
-    title: "Sistem Registrasi Nomor Surat Penawaran Marketing",
+    title: "Marketing Offer Letter Numbering System",
     image: "/proyek2.png",
     shortDescription:
-      "Web system for automated registration and tracking of marketing offer letter numbers at PT. Asuransi Raksa Pratikara (Surabaya Branch). Built with CodeIgniter (PHP), MySQL, JavaScript, CSS.",
+      "Automated system for registering and tracking marketing offer letter numbers at PT. Asuransi Raksa Pratikara. Built using CodeIgniter (PHP), MySQL, and JavaScript.",
     description: `
-      I developed a web-based system to automate the registration process of marketing offer letter numbers for the Surabaya branch of PT. Asuransi Raksa Pratikara. The system generates dynamic letter numbers and prevents duplication based on offer code, branch, month, and year.
-
+      This project is a digital system developed to automate the registration of marketing offer letter numbers at PT. Asuransi Raksa Pratikara, Surabaya Branch. It eliminates manual errors by generating structured and unique letter numbers based on predefined patterns.
+      
       **Key Features:**
-      - Automatic numbering following company format
-      - Selection of offer code and branch
-      - Recording marketing name and offer description
-      - History and search for letter numbers
-      - Automatic reset of numbering each month and year
+      - Auto-number generation based on offer code, branch, month, and year
+      - User selection for offer codes and branches
+      - Entry for marketing staff and offer descriptions
+      - Searchable history log of all registered numbers
+      - Automatic reset of numbering for new periods
 
-      This project improves documentation efficiency, reduces manual errors, and supports more structured offer management in a multi-branch environment.
+      The system ensures consistency, improves documentation accuracy, and reduces administrative workload.
     `,
     tech: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "CSS"],
     github: "https://github.com/osvaldosurbakti/nomorsurat",
@@ -45,22 +45,22 @@ export const projects = [
   },
   {
     id: "asuransi-approval",
-    title: "Sistem Approval Penawaran Asuransi",
+    title: "Insurance Offer Approval System",
     image: "/proyek3.png",
     shortDescription:
-      "Web system for managing and approving insurance offers between marketing and underwriting teams at PT. Asuransi Raksa Pratikara. Built with CodeIgniter (PHP), MySQL, JavaScript, CSS.",
+      "A web system for processing and approving insurance offers between marketing and underwriting teams. Built using CodeIgniter (PHP), MySQL, and JavaScript.",
     description: `
-      I developed a web-based system to facilitate the submission and approval process of insurance offers between the marketing and underwriting teams at PT. Asuransi Raksa Pratikara.
+      This system is designed to facilitate the workflow of submitting and approving insurance offers within PT. Asuransi Raksa Pratikara. It enables collaboration between the marketing and underwriting departments through a structured interface.
 
       **Key Features:**
-      - Role-based login and dashboard (marketing & underwriting)
-      - Input and management of insurance offers by marketing team
-      - Evaluation, comments, and approval/rejection process by underwriting
-      - Upload and access offer documents
-      - Filtering and searching by status, date, or keyword
-      - Separate offer history based on user access rights
+      - Role-based dashboards for marketing and underwriting
+      - Offer creation and management by marketing team
+      - Evaluation and approval/rejection by underwriting
+      - Document uploads and secure storage
+      - Filtering by status, keywords, and date
+      - Personalized offer history based on user roles
 
-      This system improves collaboration between marketing and underwriting, accelerates business processes, and reduces the risk of errors in managing offer documents.
+      The solution enhances process efficiency, ensures data traceability, and reduces manual handling of sensitive insurance documents.
     `,
     tech: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "CSS"],
     github: "https://github.com/osvaldosurbakti/mapenawaran",
@@ -68,73 +68,71 @@ export const projects = [
   },
   {
     id: "pesonaspa",
-    title: "PesonaSpa.id – Website Spa & Reflexology",
+    title: "PesonaSpa.id – Spa & Reflexology Website",
     image: "/proyek4.png",
     shortDescription:
-      "Company profile website for PesonaSpa.id, a spa & reflexology business in Bandung. Features service info, branch locations, WhatsApp integration, and a responsive gallery. Built with CodeIgniter (PHP), HTML, CSS, JavaScript.",
+      "A company profile website for a spa and reflexology business in Bandung, featuring services, locations, gallery, and WhatsApp integration. Built using CodeIgniter (PHP).",
     description: `
-      PesonaSpa.id is a professional company profile website for a spa and reflexology business based in Bandung. The website introduces spa services and makes it easy for customers to access branch locations, WhatsApp contacts, gallery, and service descriptions.
+      PesonaSpa.id is a responsive and informative company website developed for a spa and reflexology brand in Bandung. It provides visitors with easy access to business information and communication channels.
 
       **Key Features:**
-      - Homepage with tagline and service CTA
-      - About Us section introducing business vision and services
-      - Spa Services: Reflexology, Body Massage, Body Scrub
-      - Gallery showcasing spa rooms and facilities
-      - Branch list with Google Maps integration for direct navigation
-      - WhatsApp button at each branch for quick communication
-      - Scroll to Top Button for better navigation
-      - Responsive design for desktop and mobile
-      - Open Graph & Twitter Card metadata for social media sharing
+      - Elegant homepage with promotional call-to-action
+      - Company profile with vision, mission, and services
+      - Gallery showcasing interior and facilities
+      - Spa services (Reflexology, Massage, Body Scrub)
+      - Branch list integrated with Google Maps
+      - Direct WhatsApp chat for each location
+      - Scroll-to-top and responsive design for all devices
+      - SEO-optimized with Open Graph and Twitter Card metadata
     `,
     tech: ["PHP", "CSS", "JavaScript", "CodeIgniter"],
     video: "/proyek4.mp4"
   },
   {
     id: "jatimakmur",
-    title: "Website Perusahaan Jatimakmur Pratama",
+    title: "Jatimakmur Pratama Company Profile Website",
     image: "/proyek5.png",
     shortDescription:
-      "Company profile website for Jatimakmur Pratama, featuring company profile, product showcase, gallery, production process, and contact page. Built with React and React Router.",
+      "A company profile website for Jatimakmur Pratama featuring product showcase, gallery, production process, and contact page. Built with React and React Router.",
     description: `
-      This project is a company profile website for Jatimakmur Pratama, developed using React. The website features a company profile page, product showcase, photo gallery, production process description, and a contact page. Navigation between pages is seamless using React Router, with automatic scroll-to-top on each route change.
+      This web application serves as a digital portfolio for Jatimakmur Pratama. Built with React.js, it provides a structured layout of company information, products, and contact details for potential clients.
 
       **Key Features:**
-      - Company profile and vision introduction
-      - Product showcase with detailed descriptions
-      - Photo gallery of products and facilities
-      - Production process explanation
-      - Contact page for client inquiries
-      - Smooth navigation with React Router and auto scroll-to-top
-      - Responsive design and modular components for optimal UX
+      - Introduction to company profile and values
+      - Product display with comprehensive details
+      - Photo gallery of products and manufacturing
+      - Explanation of production workflow
+      - Contact form and inquiry section
+      - Seamless routing and auto-scroll behavior
+      - Fully responsive layout for mobile and desktop
 
-      This website strengthens the company's branding, helps potential clients learn about products and services, and increases Jatimakmur Pratama's credibility in the digital space.
+      The site helps strengthen brand presence and foster trust with potential customers.
     `,
-    tech: ["React", "React Router", "CSS", "JavaScript"],
+    tech: ["React", "React Router", "Tailwind CSS", "CSS", "JavaScript"],
     github: "https://github.com/osvaldosurbakti/jatimakmurpratama",
-    demo : "https://jatimakmurpratama.vercel.app/",
+    demo: "https://jatimakmurpratama.vercel.app/",
     video: "/proyek5.mp4"
   },
   {
     id: "seroja-group",
-    title: "Company Profile & Recruitment Website – Seroja Medan Group",
+    title: "Seroja Medan Group – Profile & Recruitment Website",
     image: "/proyek6.png",
     shortDescription:
-      "Modern company profile and recruitment website for Seroja Medan Group. Features company info, project portfolios, job listings, and online application. Built with React, Node.js, MongoDB, and Tailwind CSS.",
+      "A modern company profile and recruitment platform for Seroja Medan Group, featuring portfolios, job listings, and online application. Built with React, Node.js, MongoDB, and Tailwind CSS.",
     description: `
-      This project is a modern, responsive company profile and recruitment website developed for Seroja Medan Group. It showcases company information, project portfolios, job openings, and a job application form. The system is built using React.js, Node.js, MongoDB, and Tailwind CSS with a modular component structure for scalability and easy maintenance.
+      This project is a full-featured web platform designed for Seroja Medan Group to showcase its brand, services, and recruitment opportunities. Built with modern web technologies and a scalable architecture.
 
       **Key Features:**
-      - Company profile pages, including vision, mission, and leadership team
-      - Portfolio showcase with detailed descriptions and images
-      - Career section with active job listings and detailed job descriptions
-      - Job application form with resume upload functionality
-      - Login system for admin and superadmin (dummy authentication)
-      - Dynamic navigation UI: public users see a top navbar, admin/superadmin see a sidebar dashboard
+      - Company overview including vision, mission, and leadership
+      - Portfolio display with image and project descriptions
+      - Career section with job listings and application form
+      - Resume upload feature for applicants
+      - Admin and superadmin access with role-based dashboards
+      - Dynamic navigation: navbar for public, sidebar for admin
 
       **Tech Stack:** React.js, Node.js, MongoDB, Tailwind CSS
 
-      **Project Purpose:**  
-      To provide a professional digital platform that promotes the company’s identity and facilitates online job recruitment effectively.
+      This system establishes a digital identity for the company while simplifying the hiring process.
     `,
     tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/osvaldosurbakti/serojamedan",
@@ -143,30 +141,62 @@ export const projects = [
   },
   {
     id: "ratuseroja",
-    title: "🌸 Ratu Seroja Nirwana Group – Company Profile Website",
+    title: "🌸 Ratu Seroja Nirwana Group – Company Website",
     image: "/proyek7.png",
     shortDescription:
-      "Company profile website for Ratu Seroja Nirwana Group, featuring company info, services, project portfolio, news, and contact. Built with React.js and Tailwind CSS.",
+      "A company profile website for Ratu Seroja Nirwana Group, featuring services, portfolio, news section, and contact form. Developed with React.js and Tailwind CSS.",
     description: `
-      I developed a company profile website for Ratu Seroja Nirwana Group, a company engaged in services and trading. The website is designed to showcase company information, main services, project portfolio, and a news & updates feature.
+      Ratu Seroja Nirwana Group's website is designed as a professional company profile and information portal. It highlights core services, portfolio, and updates with a content management system for admins.
 
       **Key Features:**
-      - Modern, responsive homepage
-      - About Company (Profile, Vision, Mission)
-      - List of offered services
-      - Project portfolio
-      - "News & Update" feature manageable by admin
-      - Contact form and social media info
+      - Elegant, responsive homepage with modern UI
+      - Company profile, vision, and mission section
+      - Services offered with visual emphasis
+      - Project portfolio with image highlights
+      - News & Updates module editable by admin
+      - Contact form and social media links
+      - Backend API built with Node.js and MongoDB to manage portfolio and news content
 
-      **Technologies Used:**
-      - Frontend: React.js & Tailwind CSS
+      **Tech Stack:**
+      - Frontend: React.js, Tailwind CSS
       - Routing: React Router
-      - Admin Content Management: Designed for non-technical users to update content (especially news & portfolio)
-      - Responsive Design: Optimized for desktop and mobile
+      - Content Management: Admin-friendly for non-tech users
+
+      This platform boosts corporate branding and allows for real-time news publishing.
     `,
-    tech: ["React.js", "Tailwind CSS", "React Router"],
+    tech: ["React.js", "Tailwind CSS", "React Router", "Node.js", "MongoDB"],
     github: "https://github.com/osvaldosurbakti/ratuserojanirwana/commit/4cfe7fad3a90449b4fafffd9f7da2ce51c4ff614",
     demo: "https://ratuserojanirwana.vercel.app/",
     video: "/proyek7.mp4"
-  }
+  },
+  {
+  id: "gowwee-perfume",
+  title: "Gowwee Perfume – Company Website & Contact System",
+  image: "/proyek8.png",
+  shortDescription:
+    "A professional company profile and contact landing page for Gowwee Perfume, featuring product info, branding section, and WhatsApp contact system. Built with React.js and Tailwind CSS.",
+  description: `
+    I developed a modern company profile and contact-focused landing page for **Gowwee Perfume**, a fragrance brand targeting the digital market. The website introduces the brand, displays its signature products, and enables users to contact the business directly via WhatsApp.
+
+    **Key Features:**
+    - Responsive homepage with visual introduction to the brand
+    - Hero section with tagline and promotional CTA
+    - About section introducing Gowwee's identity and values
+    - Product showcase with image, description, and categories
+    - Integrated WhatsApp button for direct customer engagement
+    - Clean layout, optimized typography, and smooth navigation
+    - Built with scalable and maintainable component structure
+
+    **Technologies Used:**
+    - Frontend: React.js & Tailwind CSS
+    - Routing: React Router
+    - Contact: WhatsApp deep-linking
+    - Responsive Design: Mobile-first and SEO friendly
+  `,
+  tech: ["React.js", "Tailwind CSS", "React Router"],
+  github: "https://github.com/osvaldosurbakti/gowweeperfume",
+  demo: "https://gowweeperfume.vercel.app/",
+  video: "/proyek8.mp4"
+}
+
 ];

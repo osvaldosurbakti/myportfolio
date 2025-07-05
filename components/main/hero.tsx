@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
@@ -83,7 +84,7 @@ export default function Hero() {
         <Image
           src="/hero.png"
           alt="Hero Background"
-          layout="fill"
+          fill
           objectFit="cover"
           quality={100}
           className="z-0"

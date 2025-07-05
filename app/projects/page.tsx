@@ -22,18 +22,19 @@ export default function Projects() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <motion.h1
-          className="text-5xl font-extrabold text-gray-900 text-center mb-6 drop-shadow-md"
+          className="text-5xl font-extrabold text-gray-900 text-center mb-6 drop-shadow-sm tracking-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <span className="inline-flex items-center gap-2">
-            <span className="bg-gradient-to-tr from-blue-500 via-purple-500 to-blue-400 text-white px-4 py-2 rounded-full shadow-lg text-3xl mr-2">
+            <span className="bg-gradient-to-tr from-blue-500 via-purple-500 to-blue-400 text-white px-4 py-2 rounded-full shadow-md text-3xl">
               🚀
             </span>
             My Projects
           </span>
         </motion.h1>
+
         <motion.p
           className="text-lg text-gray-700 text-center mb-14 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: -10 }}
@@ -43,23 +44,24 @@ export default function Projects() {
           Explore some of my featured projects. Click on a project to see more
           details and the technologies behind each solution.
         </motion.p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
-              className="relative bg-white/90 dark:bg-gray-900/80 rounded-2xl shadow-xl hover:shadow-2xl transition group overflow-hidden border border-blue-100 hover:border-blue-400 backdrop-blur-md"
+              className="relative bg-white/90 dark:bg-gray-900/80 rounded-2xl shadow-lg hover:shadow-2xl transition group overflow-hidden border border-gray-200 hover:border-blue-500 backdrop-blur-md"
               whileHover={{
-                y: -10,
-                scale: 1.04,
-                boxShadow: "0 12px 32px 0 rgba(59,130,246,0.13)",
+                y: -8,
+                scale: 1.03,
+                boxShadow: "0 12px 32px rgba(59,130,246,0.13)",
               }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.15 + idx * 0.08,
+                delay: 0.1 + idx * 0.08,
                 duration: 0.5,
                 type: "spring",
-                stiffness: 120,
+                stiffness: 100,
               }}
             >
               <Link href={`/projects/${project.id}`}>
@@ -69,32 +71,34 @@ export default function Projects() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover w-full h-full rounded-t-2xl group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover w-full h-full rounded-t-2xl group-hover:scale-105 transition-transform duration-300 ease-in-out"
                     />
                     <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-3 py-1 rounded-full shadow font-semibold">
                       {project.tech?.[0] || "Project"}
                     </div>
                   </div>
-                  <div className="flex-1 p-6 flex flex-col">
-                    <h2 className="text-2xl font-bold text-blue-700 mb-2 group-hover:underline">
-                      {project.title}
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-300 line-clamp-3 mb-4">
-                      {project.shortDescription}
-                    </p>
+                  <div className="flex-1 p-6 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-2xl font-bold text-blue-700 mb-2 group-hover:underline transition duration-200">
+                        {project.title}
+                      </h2>
+                      <p className="text-gray-600 dark:text-gray-300 line-clamp-3 mb-4">
+                        {project.shortDescription}
+                      </p>
+                    </div>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech?.map((tech) => (
                         <span
                           key={tech}
-                          className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full"
+                          className="bg-blue-100 hover:bg-blue-200 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full transition"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
-                    <span className="inline-block mt-auto text-blue-600 font-semibold hover:underline">
-                      View Details &rarr;
-                    </span>
+                    <button className="mt-auto text-sm font-medium text-blue-600 hover:underline self-start">
+                      View Project →
+                    </button>
                   </div>
                 </div>
               </Link>

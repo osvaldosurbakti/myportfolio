@@ -35,16 +35,22 @@ export default function SkillsCarousel() {
   );
 
   return (
-    <div className="py-16 px-6 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
-      <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
-        Skills
+    <div className="py-20 px-6 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
+      <h2 className="text-4xl font-extrabold text-center text-gray-900 dark:text-white tracking-tight mb-2">
+        My Skills
       </h2>
-      <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 text-center max-w-2xl mx-auto">
-        Teknologi dan tools yang saya kuasai sebagai Fullstack Developer.
+      <div className="w-16 h-1 mx-auto mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 rounded-full opacity-70" />
+      <p className="text-lg text-gray-600 dark:text-gray-300 mt-2 text-center max-w-2xl mx-auto">
+        Technologies and tools I master as a{" "}
+        <span className="font-semibold text-blue-700 dark:text-blue-300">
+          Fullstack Developer
+        </span>
+        . Explore my expertise in frontend, backend, database, and cloud
+        solutions.
       </p>
 
       {/* Search & Filter */}
-      <div className="flex flex-wrap justify-center gap-4 mt-6">
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
         <div className="relative">
           <input
             type="text"
@@ -72,7 +78,7 @@ export default function SkillsCarousel() {
 
       {/* No Results Found */}
       {filteredSkills.length === 0 && (
-        <div className="text-center py-4 text-gray-600 dark:text-gray-400">
+        <div className="text-center py-8 text-gray-600 dark:text-gray-400 text-lg italic">
           No skills found matching your search.
         </div>
       )}
@@ -84,11 +90,11 @@ export default function SkillsCarousel() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="mt-8 max-w-6xl mx-auto">
+          <div className="mt-10 max-w-6xl mx-auto">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               slidesPerView={3}
-              spaceBetween={20}
+              spaceBetween={24}
               navigation
               pagination={{ clickable: true }}
               autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -103,10 +109,10 @@ export default function SkillsCarousel() {
                 <SwiperSlide key={skill.name}>
                   <Tilt glareEnable={true} glareMaxOpacity={0.5} scale={1.05}>
                     <motion.div
-                      className="p-6 bg-gradient-to-br from-white/70 via-blue-50/60 to-purple-100/60 dark:from-gray-900/70 dark:via-blue-900/60 dark:to-purple-900/60 rounded-2xl shadow-xl border-2 border-transparent hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-2xl hover:scale-105 transition-all duration-500 relative group text-center backdrop-blur-md"
+                      className="p-7 bg-gradient-to-br from-white/80 via-blue-50/70 to-purple-100/70 dark:from-gray-900/80 dark:via-blue-900/70 dark:to-purple-900/70 rounded-2xl shadow-xl border-2 border-transparent hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-2xl hover:scale-105 transition-all duration-500 relative group text-center backdrop-blur-md"
                       whileHover={{
-                        y: -8,
-                        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+                        y: -10,
+                        boxShadow: "0 12px 32px 0 rgba(31, 38, 135, 0.18)",
                       }}
                     >
                       <div className="w-16 h-16 mx-auto flex items-center justify-center">
@@ -116,7 +122,7 @@ export default function SkillsCarousel() {
                               "w-full h-full text-blue-600 dark:text-blue-400 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 drop-shadow-lg",
                           })}
                       </div>
-                      <p className="mt-4 text-lg font-semibold text-gray-900 dark:text-white drop-shadow-sm">
+                      <p className="mt-5 text-lg font-bold text-gray-900 dark:text-white drop-shadow-sm">
                         {skill.name}
                       </p>
                       <span
@@ -126,6 +132,11 @@ export default function SkillsCarousel() {
                       >
                         {skill.level}
                       </span>
+                      {["React", "Node.js"].includes(skill.name) && (
+                        <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full shadow font-semibold z-10">
+                          Top Skill
+                        </span>
+                      )}
                     </motion.div>
                   </Tilt>
                 </SwiperSlide>
@@ -137,3 +148,11 @@ export default function SkillsCarousel() {
     </div>
   );
 }
+
+// Saran pengembangan lebih lanjut untuk memperindah section skills:
+// 1. Tambahkan animasi fade/slide pada judul dan filter menggunakan framer-motion.
+// 2. Tambahkan badge "Top Skill" pada skill tertentu (misal: React, Node.js) jika ingin menonjolkan.
+// 3. Tambahkan tooltip pada icon skill untuk deskripsi singkat (gunakan react-tooltip atau custom).
+// 4. Tambahkan efek glassmorphism lebih kuat pada card (misal: backdrop-blur lebih tinggi, border gradient).
+// 5. Tambahkan background SVG pattern/gradient halus di section skills.
+// 6. Tambahkan divider dekoratif di antara judul dan filter (misal: garis gradient).
