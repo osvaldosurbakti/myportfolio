@@ -119,37 +119,37 @@ export default function Navbar() {
         {/* Mobile Sidebar Navigation */}
  <AnimatePresence>
   {isOpen && (
-    <motion.div
-      initial={{ x: "-100%", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: "-100%", opacity: 0 }}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="fixed top-0 left-0 h-full w-4/5 max-w-xs bg-gradient-to-br from-blue-50 via-white to-purple-100 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950 shadow-2xl z-[70] flex flex-col py-8 px-6 border-r border-blue-100 dark:border-blue-900"
-      style={{ borderTopRightRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
+<motion.div
+  initial={{ x: "-100%", opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  exit={{ x: "-100%", opacity: 0 }}
+  transition={{ duration: 0.35, ease: "easeInOut" }}
+  className="fixed top-0 left-0 h-full w-4/5 max-w-xs bg-gradient-to-br from-blue-50 via-white to-purple-100 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950 shadow-2xl z-[70] flex flex-col px-6 pt-3 pb-8 border-r border-blue-100 dark:border-blue-900"
+  style={{ borderTopRightRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
+>
+  {/* Header Section */}
+  <div className="flex items-center justify-between mb-6">
+    <div className="flex items-center gap-3">
+      <Image
+        src="/logo.png"
+        alt="Logo"
+        width={34}
+        height={34}
+        className="rounded-full shadow border-2 border-blue-400"
+      />
+      <span className="text-base font-semibold text-blue-700 dark:text-blue-200 tracking-tight leading-tight">
+        Osvaldo Surbakti
+      </span>
+    </div>
+    <button
+      onClick={() => setIsOpen(false)}
+      className="w-8 h-8 flex items-center justify-center text-blue-700 dark:text-blue-200 bg-white/80 dark:bg-gray-900/80 rounded-full shadow hover:bg-blue-100 dark:hover:bg-blue-900 transition"
+      aria-label="Close menu"
     >
-
-{/* Header Section with Brand and Close Button */}
-<div className="flex items-center justify-between mb-4">
-  <div className="flex items-center gap-3">
- <Image
-  src="/logo.png"
-  alt="Logo"
-  width={38}
-  height={38}
-  className="rounded-full shadow border-2 border-blue-400 transition-transform duration-200 group-hover:scale-110"
-/>
-    <span className="text-lg font-extrabold text-blue-700 dark:text-blue-200 tracking-tight hover:text-purple-600 dark:hover:text-purple-400 transition">
-  Osvaldo Surbakti
-</span>
+      <X size={18} />
+    </button>
   </div>
-  <button
-    onClick={() => setIsOpen(false)}
-    className="text-blue-700 dark:text-blue-200 focus:outline-none bg-white/70 dark:bg-gray-900/70 rounded-full p-2 shadow hover:bg-blue-100 dark:hover:bg-blue-900 transition"
-    aria-label="Close menu"
-  >
-    <X size={28} />
-  </button>
-</div>
+
 
 
       {/* Navigation Links */}

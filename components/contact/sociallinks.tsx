@@ -12,7 +12,7 @@ export default function SocialLinks() {
         <Link href="https://github.com/osvaldosurbakti" className="text-gray-900 hover:text-gray-700 text-2xl hover:scale-110 transition-transform">
           <FaGithub />
         </Link>
-        <Link href="https://linkedin.com/in/osvaldosurbakti" className="text-blue-700 hover:text-blue-500 text-2xl hover:scale-110 transition-transform">
+        <Link href="https://linkedin.com/in/osvaldo-surbakti" className="text-blue-700 hover:text-blue-500 text-2xl hover:scale-110 transition-transform">
           <FaLinkedin />
         </Link>
         <Link href="https://wa.me/087788668719" className="text-green-600 hover:text-green-800 text-2xl hover:scale-110 transition-transform">
