@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-100 text-gray-900`}>
       <ThemeProvider>
         <Navbar />
-        <main className="container mx-auto px-4 pt-16">{children}</main>
+        <main className="container mx-auto px-4 pt-16 pb-24">{children}</main>
         <Footer />
         </ThemeProvider>
       </body>
