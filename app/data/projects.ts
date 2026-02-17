@@ -1,71 +1,71 @@
 // Professional English Data for Projects Page
 
 export const projects = [
-  {
-    id: "approval-app",
-    title: "Cash Advance Approval System",
-    image: "/proyek1.png",
-    shortDescription:
-      "A web-based approval system for managing cash advance requests with multi-role workflow (Requester, KTU, EM, Finance). Developed using Next.js, React, Tailwind CSS, and MongoDB.",
-    description: `
-      This project is a professional web-based system designed to streamline the approval workflow of cash advance (uang muka) requests within an organization. It supports a multi-role access structure with the following flow:
+  // {
+  //   id: "approval-app",
+  //   title: "Cash Advance Approval System",
+  //   image: "/proyek1.png",
+  //   shortDescription:
+  //     "A web-based approval system for managing cash advance requests with multi-role workflow (Requester, KTU, EM, Finance). Developed using Next.js, React, Tailwind CSS, and MongoDB.",
+  //   description: `
+  //     This project is a professional web-based system designed to streamline the approval workflow of cash advance (uang muka) requests within an organization. It supports a multi-role access structure with the following flow:
       
-      1. Login: All users (Requester, KTU, EM, Finance) log in with individual credentials.
-      2. Request Submission: Requesters fill out detailed forms including amount, purpose, and due date.
-      3. KTU Review: KTU reviews and approves/rejects requests with optional remarks.
-      4. EM Confirmation: EM provides acknowledgment and oversight approval.
-      5. Finance Processing: Finance team completes the process by adding transfer data and uploading proof.
-      6. Tracking: Users can track request status and view historical submissions.
-    `,
-    tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
-    github: "https://github.com/osvaldosurbakti/approval-app",
-    video: "/proyek1.mp4"
-  },
-  {
-    id: "marketing-reg-surat",
-    title: "Marketing Offer Letter Numbering System",
-    image: "/proyek2.png",
-    shortDescription:
-      "Automated system for registering and tracking marketing offer letter numbers at PT. Asuransi Raksa Pratikara. Built using CodeIgniter (PHP), MySQL, and JavaScript.",
-    description: `
-      This project is a digital system developed to automate the registration of marketing offer letter numbers at PT. Asuransi Raksa Pratikara, Surabaya Branch. It eliminates manual errors by generating structured and unique letter numbers based on predefined patterns.
+  //     1. Login: All users (Requester, KTU, EM, Finance) log in with individual credentials.
+  //     2. Request Submission: Requesters fill out detailed forms including amount, purpose, and due date.
+  //     3. KTU Review: KTU reviews and approves/rejects requests with optional remarks.
+  //     4. EM Confirmation: EM provides acknowledgment and oversight approval.
+  //     5. Finance Processing: Finance team completes the process by adding transfer data and uploading proof.
+  //     6. Tracking: Users can track request status and view historical submissions.
+  //   `,
+  //   tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
+  //   github: "https://github.com/osvaldosurbakti/approval-app",
+  //   video: "/proyek1.mp4"
+  // },
+  // {
+  //   id: "marketing-reg-surat",
+  //   title: "Marketing Offer Letter Numbering System",
+  //   image: "/proyek2.png",
+  //   shortDescription:
+  //     "Automated system for registering and tracking marketing offer letter numbers at PT. Asuransi Raksa Pratikara. Built using CodeIgniter (PHP), MySQL, and JavaScript.",
+  //   description: `
+  //     This project is a digital system developed to automate the registration of marketing offer letter numbers at PT. Asuransi Raksa Pratikara, Surabaya Branch. It eliminates manual errors by generating structured and unique letter numbers based on predefined patterns.
       
-      **Key Features:**
-      - Auto-number generation based on offer code, branch, month, and year
-      - User selection for offer codes and branches
-      - Entry for marketing staff and offer descriptions
-      - Searchable history log of all registered numbers
-      - Automatic reset of numbering for new periods
+  //     **Key Features:**
+  //     - Auto-number generation based on offer code, branch, month, and year
+  //     - User selection for offer codes and branches
+  //     - Entry for marketing staff and offer descriptions
+  //     - Searchable history log of all registered numbers
+  //     - Automatic reset of numbering for new periods
 
-      The system ensures consistency, improves documentation accuracy, and reduces administrative workload.
-    `,
-    tech: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "CSS"],
-    github: "https://github.com/osvaldosurbakti/nomorsurat",
-    video: "/proyek2.mp4"
-  },
-  {
-    id: "asuransi-approval",
-    title: "Insurance Offer Approval System",
-    image: "/proyek3.png",
-    shortDescription:
-      "A web system for processing and approving insurance offers between marketing and underwriting teams. Built using CodeIgniter (PHP), MySQL, and JavaScript.",
-    description: `
-      This system is designed to facilitate the workflow of submitting and approving insurance offers within PT. Asuransi Raksa Pratikara. It enables collaboration between the marketing and underwriting departments through a structured interface.
+  //     The system ensures consistency, improves documentation accuracy, and reduces administrative workload.
+  //   `,
+  //   tech: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "CSS"],
+  //   github: "https://github.com/osvaldosurbakti/nomorsurat",
+  //   video: "/proyek2.mp4"
+  // },
+  // {
+  //   id: "asuransi-approval",
+  //   title: "Insurance Offer Approval System",
+  //   image: "/proyek3.png",
+  //   shortDescription:
+  //     "A web system for processing and approving insurance offers between marketing and underwriting teams. Built using CodeIgniter (PHP), MySQL, and JavaScript.",
+  //   description: `
+  //     This system is designed to facilitate the workflow of submitting and approving insurance offers within PT. Asuransi Raksa Pratikara. It enables collaboration between the marketing and underwriting departments through a structured interface.
 
-      **Key Features:**
-      - Role-based dashboards for marketing and underwriting
-      - Offer creation and management by marketing team
-      - Evaluation and approval/rejection by underwriting
-      - Document uploads and secure storage
-      - Filtering by status, keywords, and date
-      - Personalized offer history based on user roles
+  //     **Key Features:**
+  //     - Role-based dashboards for marketing and underwriting
+  //     - Offer creation and management by marketing team
+  //     - Evaluation and approval/rejection by underwriting
+  //     - Document uploads and secure storage
+  //     - Filtering by status, keywords, and date
+  //     - Personalized offer history based on user roles
 
-      The solution enhances process efficiency, ensures data traceability, and reduces manual handling of sensitive insurance documents.
-    `,
-    tech: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "CSS"],
-    github: "https://github.com/osvaldosurbakti/mapenawaran",
-    video: "/proyek3.mp4"
-  },
+  //     The solution enhances process efficiency, ensures data traceability, and reduces manual handling of sensitive insurance documents.
+  //   `,
+  //   tech: ["PHP", "CodeIgniter", "MySQL", "JavaScript", "CSS"],
+  //   github: "https://github.com/osvaldosurbakti/mapenawaran",
+  //   video: "/proyek3.mp4"
+  // },
   {
     id: "pesonaspa",
     title: "PesonaSpa.id – Spa & Reflexology Website",
